@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       columnDefs: [{
-        headerName: "Make", field: "make", sortable: true, filter: true, checkboxSelection: true, rowGroup: true
+        headerName: "Make", field: "make", sortable: true, filter: true, rowGroup: true, hide:true
       }, {
         headerName: "Model", field: "model", sortable: true, filter: true
       }, {
@@ -20,10 +20,10 @@ class App extends Component {
       }],
       rowData: null,
       autoGroupColumnDef: {
-        headerName : 'Model',
-        field: 'model',
-        cellRender: 'agGroupCellRenderer',
-        cellRenderParams : {
+        headerName : 'Make',
+        field: 'make',
+        cellRenderer: 'agGroupCellRenderer',
+        cellRendererParams : {
           checkbox: true
         }
       }
